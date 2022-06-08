@@ -30,7 +30,7 @@ jobs:
       - run: make tests_run
         timeout-minutes: 2
   push_to_mirror:
-    needs: cleanup
+    needs: check_repository_cleanliness
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
